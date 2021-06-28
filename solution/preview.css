@@ -56,21 +56,127 @@ html {
 body {
     background-color: hsl(0, 0%, 95%);
     display: flex;
-    flex-direction:column;
     justify-content: center;
     align-items: center;
     width: 100%;
     
 }
 
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 1rem 2rem 1rem 1rem;
+    
+}
+
+.part {
+    padding: 1rem;
+}
+
+h1 {
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+    color: hsl(0, 0%, 95%);
+    padding-bottom: 10%;
+    text-transform: uppercase;
+}
+
+p {
+    font-family: 'Lexend Deca', sans-serif;
+    color: hsla(0, 0%, 100%, 0.75);
+    line-height: 1.5rem;
+    padding-bottom: 10%;
+}
 .sedan {
     background-color: hsl(31, 77%, 52%);
+    padding: 10%;
+    border:hsl(31, 77%, 52%) 0.066rem solid;
+    border-top-left-radius: 3%;
+    border-top-right-radius: 3%;
 }
 
 .suv {
     background-color: hsl(184, 100%, 22%);
+    padding: 10%;
+    border:hsl(184, 100%, 22%)  0.066rem solid;
 }
 
 .luxury {
    background-color: hsl(179, 100%, 13%);
+   padding: 10%;
+   border: hsl(179, 100%, 13%) 0.066rem solid;
+   border-bottom-left-radius: 3%;
+   border-bottom-right-radius: 3%;
+}
+
+button {
+    background-color: hsl(0, 0%, 95%);
+    border: 0.066rem solid hsl(0, 0%, 95%);
+    border-radius: 995px;
+    font-family: 'Lexend Deca', sans-serif;
+    line-height: 1.5rem;
+    padding:0.73rem 2.1rem;
+}
+
+.sedan button {
+    color: hsl(31, 77%, 52%); 
+}
+
+.suv button {
+    color: hsl(184, 100%, 22%);
+}
+
+.luxury button {
+    color: hsl(179, 100%, 13%);
+}
+
+/** DESKTOP **/
+
+@media screen and (min-width:800px) {
+
+    .card {
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 75%;
+        flex-grow: 1;   
+    }
+    
+    .sedan {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 3%;
+    }
+
+    .luxury {
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 3%;
+    }
+
+    .sedan button:hover {
+        background-color:hsl(31, 77%, 52%);
+        color: hsl(0, 0%, 95%);
+        transition:0.5s;
+        transition-timing-function: ease-in-out;
+        cursor: pointer;
+    }
+
+    .suv button:hover {
+        background-color: hsl(184, 100%, 22%);
+        color: hsl(0, 0%, 95%);
+        transition:0.5s;
+        transition-timing-function: ease-in-out;
+        cursor: pointer;
+    }
+
+    .luxury button:hover {
+        background-color: hsl(179, 100%, 13%);
+        color:hsl(0, 0%, 95%);
+        transition: 0.5s;
+        transition-timing-function: ease-in-out;
+        cursor: pointer;
+    }
 }
